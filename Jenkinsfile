@@ -24,6 +24,11 @@ pipeline {
                 }
             }
         }
+       stage('Docker Build') {
+    steps {
+        sh 'docker build -t retail-banking-api:latest app-source/accounts-api'
+    }
+}
 
         stage('CI Success') {
             steps {
