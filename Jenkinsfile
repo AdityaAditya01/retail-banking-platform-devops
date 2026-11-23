@@ -17,6 +17,14 @@ pipeline {
             }
         }
 
+        stage('Automated API Testing') {
+            steps {
+                dir('app-source/accounts-api') {
+                    sh 'npm test'
+                }
+            }
+        }
+
         stage('CI Success') {
             steps {
                 echo 'Banking API CI pipeline completed successfully!'
