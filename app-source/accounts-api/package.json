@@ -4,6 +4,7 @@
   "description": "Retail Banking Accounts API for DevOps project",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "node --test"
   }
 }
